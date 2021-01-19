@@ -1,5 +1,5 @@
 const router = require('express').Router()
+router.use('/api', require('./bookRoutes.js'))
 
-// your routes here...
 
 module.exports = router
