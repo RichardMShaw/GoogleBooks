@@ -27,20 +27,10 @@ const Navbar = () => {
           <Typography variant="h5" className={classes.title}>
             Google Books
           </Typography>
-          <Button
-            color="inherit"
-            href="/"
-            variant="h6"
-            className={classes.title}
-          >
+          <Button color="inherit" href="/" className={classes.title}>
             Search
           </Button>
-          <Button
-            color="inherit"
-            href="/saved/"
-            variant="h6"
-            className={classes.title}
-          >
+          <Button color="inherit" href="/saved/" className={classes.title}>
             Saved
           </Button>
         </Toolbar>
