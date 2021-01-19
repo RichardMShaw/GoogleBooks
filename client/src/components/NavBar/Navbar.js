@@ -4,8 +4,6 @@ import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
-import IconButton from '@material-ui/core/IconButton'
-import MenuIcon from '@material-ui/icons/Menu'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -15,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
     marginRight: theme.spacing(2),
   },
   title: {
-    flexGrow: 1,
+    flexGrow: 0.01,
   },
 }))
 
@@ -26,18 +24,25 @@ const Navbar = () => {
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
-          <IconButton
-            edge="start"
-            className={classes.menuButton}
-            color="inherit"
-            aria-label="menu"
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" className={classes.title}>
-            News
+          <Typography variant="h5" className={classes.title}>
+            Google Books
           </Typography>
-          <Button color="inherit">Login</Button>
+          <Button
+            color="inherit"
+            href="/saved/"
+            variant="h6"
+            className={classes.title}
+          >
+            Saved
+          </Button>
+          <Button
+            color="inherit"
+            href="/search/"
+            variant="h6"
+            className={classes.title}
+          >
+            SearchS
+          </Button>
         </Toolbar>
       </AppBar>
     </div>
