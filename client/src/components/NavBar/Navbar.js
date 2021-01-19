@@ -29,19 +29,19 @@ const Navbar = () => {
           </Typography>
           <Button
             color="inherit"
+            href="/"
+            variant="h6"
+            className={classes.title}
+          >
+            Search
+          </Button>
+          <Button
+            color="inherit"
             href="/saved/"
             variant="h6"
             className={classes.title}
           >
             Saved
-          </Button>
-          <Button
-            color="inherit"
-            href="/search/"
-            variant="h6"
-            className={classes.title}
-          >
-            SearchS
           </Button>
         </Toolbar>
       </AppBar>
