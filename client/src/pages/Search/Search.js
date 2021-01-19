@@ -1,9 +1,9 @@
+import axios from 'axios'
 import SearchForm from '../../components/Search'
 import TitleCard from '../../components/TitleCard'
 
 const Search = () => {
   const hello = (search) => {
-    console.log(search)
   }
 
   return (
