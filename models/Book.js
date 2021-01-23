@@ -4,7 +4,7 @@ module.exports = model(
   'Book',
   new Schema({
     title: String,
-    authors: Boolean,
+    authors: [],
     description: String,
     image: String,
     link: String,

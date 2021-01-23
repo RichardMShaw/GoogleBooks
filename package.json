@@ -1,5 +1,5 @@
 {
-  "name": "01-mern",
+  "name": "googlebooks",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -14,16 +14,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/QFults/01-mern.git"
+    "url": "git+https://github.com/RichardMShaw/GoogleBooks.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/QFults/01-mern/issues"
+    "url": "https://github.com/RichardMShaw/GoogleBooks/issues"
   },
-  "homepage": "https://github.com/QFults/01-mern#readme",
+  "homepage": "https://github.com/RichardMShaw/GoogleBooks#readme",
   "dependencies": {
+    "axios": "^0.21.1",
     "concurrently": "^5.3.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",

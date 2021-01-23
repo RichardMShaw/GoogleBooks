@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
 const SearchForm = (props) => {
   const classes = useStyles()
 
-  const { title, subtitle, submitCb } = props
+  const { title, subtitle, search } = props
 
   const [searchState, setSearchState] = useState({
     search: '',
@@ -33,7 +33,7 @@ const SearchForm = (props) => {
 
   const handleSubmit = (event) => {
     event.preventDefault()
-    submitCb(searchState.search)
+    search(searchState.search)
     setSearchState({ search: '' })
   }
   return (
