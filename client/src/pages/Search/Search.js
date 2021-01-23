@@ -10,12 +10,12 @@ const { getGoogleBooks, saveBook } = BooksAPI
 const Search = () => {
   const [bookState, setBookState] = useState({
     googleBooks: [],
+    saved: [],
   })
   const searchGoogle = (search) => {
     getGoogleBooks(search).then(({ data: gBooks }) => {
       let books = gBooks.items.map((gBook, i) => {
         let info = gBook.volumeInfo
-        console.log(info)
         let book = {
           title: info.title !== undefined ? info.title : '',
           subtitle: info.subtitle !== undefined ? info.subtitle : '',
@@ -27,17 +27,22 @@ const Search = () => {
             info.canonicalVolumeLink !== undefined
               ? info.canonicalVolumeLink
               : '',
-          index: i,
         }
         return book
       })
-      console.log(books)
-      setBookState({ googleBooks: books })
+      let saved = new Array(books.length)
+      setBookState({
+        ...bookState,
+        googleBooks: books,
+        saved: saved.fill(''),
+      })
     })
   }
 
   const saveGoogleBook = (index) => {
-    console.log(bookState.googleBooks[index])
+    let saved = bookState.saved
+    saved[index] = 'true'
+    setBookState({ ...bookState, saved: saved })
     saveBook(bookState.googleBooks[index])
   }
 
@@ -50,7 +55,7 @@ const Search = () => {
       <SearchForm title="Book Search" subtitle="Book" search={searchGoogle} />
       <Card>
         <Typography>Results</Typography>
-        {bookState.googleBooks.map((book) => {
+        {bookState.googleBooks.map((book, i) => {
           return (
             <BookCard
               title={book.title}
@@ -59,8 +64,9 @@ const Search = () => {
               description={book.description}
               image={book.image}
               link={book.link}
-              index={book.index}
+              index={i}
               save={saveGoogleBook}
+              saved={bookState.saved[i]}
             />
           )
         })}

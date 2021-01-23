@@ -12,12 +12,20 @@ const Saved = () => {
 
   const delBook = (index) => {
     deleteBook(bookState.books[index]._id)
+      .then(() => {
+        getBooks().then(({ data: books }) => {
+          setBookState({ books: books })
+        })
+      })
+      .catch((err) => console.error(err))
   }
 
   useEffect(() => {
-    getBooks(({ data: books }) => {
-      setBookState({ books: books })
-    })
+    getBooks()
+      .then(({ data: books }) => {
+        setBookState({ books: books })
+      })
+      .catch((err) => console.error(err))
   }, [])
   return (
     <>
@@ -27,7 +35,7 @@ const Saved = () => {
       />
       <Card>
         <Typography>Saved</Typography>
-        {bookState.books.map((book) => {
+        {bookState.books.map((book, i) => {
           return (
             <BookCard
               title={book.title}
@@ -36,7 +44,7 @@ const Saved = () => {
               description={book.description}
               image={book.image}
               link={book.link}
-              index={book.index}
+              index={i}
               del={delBook}
             />
           )

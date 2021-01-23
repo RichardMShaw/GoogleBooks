@@ -10,11 +10,15 @@ const BookCard = (props) => {
     link,
     index,
     save,
+    saved,
     del,
   } = props
 
   const renderSaveOrDelete = () => {
-    if (save !== undefined) {
+    if (saved !== undefined && saved !== '') {
+      return <Typography>Saved!</Typography>
+    }
+    else if (save !== undefined) {
       return (
         <Button color="primary" variant="contained" onClick={() => save(index)}>
           Save
@@ -34,10 +38,10 @@ const BookCard = (props) => {
     <Card>
       <CardContent>
         <Grid container xs={12}>
-          <Grid xs={10}>
+          <Grid xs={9} item>
             <Typography>{title}</Typography>
           </Grid>
-          <Grid xs={2}>
+          <Grid xs={3} item>
             {' '}
             <Button
               color="primary"
