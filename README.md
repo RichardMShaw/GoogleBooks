@@ -6,7 +6,7 @@
 
 [Test out the Demo here!](https://nameless-fjord-51935.herokuapp.com)
 
-Note: Anyone can add books to the database. I do not take responsiblity for misuse.
+Note: Anyone can add books to the database. I do not take responsibility for misuse.
 
 A web app created in React using the Google Books API. Search up books by their title and save them to a Mongodb database for later use!
 
@@ -20,9 +20,13 @@ A web app created in React using the Google Books API. Search up books by their 
 
 ## Usage
 
-On the Search page, you can search up any book by their title on google books and them will display at the bottom of the screen. When you click the "View" button, you'll be taken to the book's Google Book's page. Clicking Saved will save your item to the database and the button will be replaced with a piece of text saying "SAVED!"
+On the Search page, you can search up any book by their title on google books and they will display at the bottom of the screen. When you click the "View" button, you'll be taken to the book's Google Book's page. Clicking Saved will save your item to the database and the button will be replaced with a piece of text saying "SAVED!"
 
-On the Saved, all books saved to the database will appear here. When you hit the delete button, the book will be removed from the page and database permentantly.
+- [Search Page](books1.png)
+
+On the Saved, all books saved to the database will appear here. When you hit the delete button, the book will be removed from the page and database permanently.
+
+- [Saved Page](books2.png)
 
 ## Technology
 
