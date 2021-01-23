@@ -22,11 +22,11 @@ A web app created in React using the Google Books API. Search up books by their 
 
 On the Search page, you can search up any book by their title on google books and they will display at the bottom of the screen. When you click the "View" button, you'll be taken to the book's Google Book's page. Clicking Saved will save your item to the database and the button will be replaced with a piece of text saying "SAVED!"
 
-- [Search Page](books1.png)
+* [Search Page](books1.png)
 
 On the Saved, all books saved to the database will appear here. When you hit the delete button, the book will be removed from the page and database permanently.
 
-- [Saved Page](books2.png)
+* [Saved Page](books2.png)
 
 ## Technology
 
